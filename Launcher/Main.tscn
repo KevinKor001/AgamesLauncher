@@ -1,0 +1,179 @@
+[gd_scene load_steps=5 format=3 uid="uid://diesgf2e1asft"]
+
+[ext_resource type="Script" path="res://Main.gd" id="1_7ciet"]
+[ext_resource type="Texture2D" uid="uid://bg2fr1lwugsq1" path="res://Textures/Icons/AccountCircle.svg" id="2_qtwqi"]
+[ext_resource type="Texture2D" uid="uid://0usyo26pghe1" path="res://Textures/BatlleLux-Blue-Small.png" id="4_muvil"]
+[ext_resource type="Texture2D" uid="uid://co3ql2otk1fnx" path="res://Textures/BattleLux-Orange-Small-flatPak.png" id="5_sm56m"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7ciet")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuButton" type="MenuButton" parent="Panel/VBoxContainer/Panel/HBoxContainer"]
+layout_mode = 2
+text = "File"
+item_count = 2
+popup/item_0/text = "1"
+popup/item_0/id = 0
+popup/item_1/text = "2"
+popup/item_1/id = 1
+
+[node name="MenuButton2" type="MenuButton" parent="Panel/VBoxContainer/Panel/HBoxContainer"]
+layout_mode = 2
+text = "Edit"
+item_count = 2
+popup/item_0/text = "1"
+popup/item_0/id = 0
+popup/item_1/text = "2"
+popup/item_1/id = 1
+
+[node name="VSeparator" type="VSeparator" parent="Panel/VBoxContainer/Panel/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/Panel/HBoxContainer"]
+layout_mode = 2
+text = "Downlading Progress :"
+
+[node name="ProgressBar" type="ProgressBar" parent="Panel/VBoxContainer/Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+
+[node name="ProgressLog" type="Label" parent="Panel/VBoxContainer/Panel/HBoxContainer/ProgressBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 9
+text = "fdfsdfds"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="VSeparator2" type="VSeparator" parent="Panel/VBoxContainer/Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Button" type="Button" parent="Panel/VBoxContainer/Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "[ Account ]"
+icon = ExtResource("2_qtwqi")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Panel/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer2/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer2/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer2/Panel/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Games  Repository"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="Panel/VBoxContainer/HBoxContainer2/Panel/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Panel/VBoxContainer/HBoxContainer2/Panel/VBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer/HBoxContainer2/Panel/VBoxContainer/VBoxContainer2/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OptionButton" type="OptionButton" parent="Panel/VBoxContainer/HBoxContainer2/Panel/VBoxContainer/VBoxContainer2/Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+expand_icon = true
+item_count = 5
+selected = 0
+popup/item_0/text = "BattleLux Vanguard [Select Version]"
+popup/item_0/icon = ExtResource("4_muvil")
+popup/item_0/id = 0
+popup/item_1/text = "BattleLux Staging"
+popup/item_1/id = 1
+popup/item_1/separator = true
+popup/item_2/text = "BattleLux Vanguard [ 1.2r3 ]"
+popup/item_2/icon = ExtResource("4_muvil")
+popup/item_2/id = 2
+popup/item_3/text = "BattleLux InDev"
+popup/item_3/id = 4
+popup/item_3/separator = true
+popup/item_4/text = "BattleLux Vanguard [ 1.2r3 ] Linux Native"
+popup/item_4/icon = ExtResource("5_sm56m")
+popup/item_4/id = 3
+
+[node name="Button2" type="Button" parent="Panel/VBoxContainer/HBoxContainer2/Panel/VBoxContainer/VBoxContainer2/Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Download"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer2/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer2/Panel/VBoxContainer/VBoxContainer3"]
+layout_mode = 2
+text = "Tools  Repository"
+horizontal_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="Panel/VBoxContainer/HBoxContainer2/Panel/VBoxContainer/VBoxContainer3"]
+layout_mode = 2
+
+[node name="Panel3" type="Panel" parent="Panel/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
